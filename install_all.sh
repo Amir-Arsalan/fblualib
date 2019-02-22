@@ -82,6 +82,7 @@ sudo apt-get install -y \
     libpython3-dev \
     python-numpy
 
+cd /
 echo
 echo Cloning repositories
 echo
@@ -102,7 +103,9 @@ echo
 echo Building folly
 echo
 
-cd $dir/folly/folly
+cd /folly/folly
+#git checkout 0e7c824
+git checkout 58a7037
 autoreconf -ivf
 ./configure
 make
@@ -115,6 +118,7 @@ if [ $current -eq 1 ]; then
     echo
 
     cd $dir/wangle/wangle
+    git checkout 9bf27e4
     cmake .
     make
     sudo make install
@@ -124,7 +128,8 @@ echo
 echo Building fbthrift
 echo
 
-cd $dir/fbthrift/thrift
+cd /fbthrift/thrift
+git checkout 6680238
 autoreconf -ivf
 ./configure
 if [ $current -eq 1 ]; then
@@ -139,14 +144,14 @@ echo
 echo 'Installing TH++'
 echo
 
-cd $dir/thpp/thpp
+cd /thpp/thpp
 ./build.sh
 
 echo
 echo 'Installing FBLuaLib'
 echo
 
-cd $dir/fblualib/fblualib
+cd /fblualib/fblualib
 ./build.sh
 
 echo
