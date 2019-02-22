@@ -104,9 +104,10 @@ echo
 echo Building folly
 echo
 
-cd /gits/folly/folly
+cd /gits/folly
 #git checkout 0e7c824
 git checkout 58a7037
+cd folly
 autoreconf -ivf
 ./configure
 make
@@ -117,9 +118,10 @@ if [ $current -eq 1 ]; then
     echo
     echo Wangle
     echo
-
-    cd /gits/wangle/wangle
+    
+    cd /gits/wangle
     git checkout 9bf27e4
+    cd wangle
     cmake .
     make
     sudo make install
@@ -129,8 +131,10 @@ echo
 echo Building fbthrift
 echo
 
-cd /gits/fbthrift/thrift
+cd /gits/fbthrift
 git checkout 6680238
+cd thrift
+
 autoreconf -ivf
 ./configure
 if [ $current -eq 1 ]; then
