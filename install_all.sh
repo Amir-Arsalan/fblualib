@@ -88,8 +88,8 @@ echo
 echo Cloning repositories
 echo
 if [ $current -eq 1 ]; then
-    git clone --depth 1 https://github.com/facebook/folly
-    git clone --depth 1 https://github.com/facebook/fbthrift
+    git clone https://github.com/facebook/folly
+    git clone https://github.com/facebook/fbthrift
     git clone https://github.com/facebook/thpp
     git clone https://github.com/facebook/fblualib
     git clone https://github.com/facebook/wangle
