@@ -132,7 +132,7 @@ echo Building fbthrift
 echo
 
 cd /gits/fbthrift
-git checkout 6680238
+git checkout 314ae43
 cd thrift
 
 autoreconf -ivf
